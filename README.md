@@ -24,7 +24,7 @@ Check out [API LIVE DEMO](https://backend-aroundtheworld.herokuapp.com/) here!!
 1. Git Clone
 
 ```
-git clone https://github.com/Groupdevelopment9/Aroundtheworld.git
+git clone https://github.com/BrandonFoy/AroundTheWorld.git
 ```
 
 2. Backend setting
