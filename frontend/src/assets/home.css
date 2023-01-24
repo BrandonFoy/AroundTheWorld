@@ -1,0 +1,107 @@
+/* NAVBAR TOP */
+
+#background{
+    width: 100%;
+}
+
+.header nav{
+    position: absolute;
+    top: 1vw;
+    width: 90vw;
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+}
+
+
+.logo a {
+    font-size: 40px !important;
+    text-decoration: none;
+    color: #198593;
+}
+
+/* SEARCH BAR */
+
+.search-container {
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+}
+
+input#searchbar {
+    width: 21%;
+    padding: 1% 4% 1% 1%;
+    position: relative;
+    border-radius: 9px;
+    opacity: 0.5;
+    float: right;
+    border-color: grey;
+}
+
+.search-container .search {
+    position: absolute;
+    right: 1%;
+    width: 3%;
+}
+
+.favorites {
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+    margin-right: -50px;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #198593;
+}
+
+/* POPULAR PLACES */
+
+.header-1 h1 {
+    text-align: center;
+    color: #198593;
+    padding-top: 50px;
+    font-size: 60px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: rgb(189, 189, 189);
+}
+
+.logo p {
+    color: #198593;
+    font-size: 25px;
+    text-align: center;
+}
+
+.rights p{
+    color: #198593;
+    font-size: 12px;
+    position: relative; 
+    text-align: right;
+    bottom: 10vh;
+    right: 5px;
+}
+
+.version {
+    color: #198593;
+    border-top: 2px solid #198593;
+    font-size: 11px;
+    position: relative;
+    text-align: center;
+}
+
+.disclaimer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.disclaimer .links {
+    text-decoration: none;
+    position: relative;
+    color: #198593;
+}
