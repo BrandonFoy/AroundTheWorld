@@ -1,10 +1,10 @@
-import API from "../../API";
+// import API from "../../API";
 import {
   addFavoritesAction,
   fetchFavoritesAction,
   deleteFavoritesAction,
 } from "./actions";
-const api = new API();
+// const api = new API();
 
 const FAVORITES_KEY = "FAVORITES_KEY";
 export const fetchFromLocalStorage = () => {

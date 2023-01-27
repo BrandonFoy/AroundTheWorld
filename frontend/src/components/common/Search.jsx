@@ -1,19 +1,41 @@
-import React from "react";
-import IM from "../../assets/img/search-icon.svg"
+import React, { useState } from "react";
+import Imgsearch from "../../assets/img/search-icon.svg";
+import { useDispatch } from "react-redux";
+import { push } from "connected-react-router";
 
 const Search = () => {
+  const dispatch = useDispatch();
+  const [search, setSearch] = useState();
 
-  function find() {
-    
-} 
+  const inputSearch = (event) => {
+    setSearch(event.target.value);
+  };
 
+  const submitAction = () => {
+    dispatch(push("/places?search=" + search));
+  };
 
   return (
     <>
-      <div className="search-container">
-        <input id="searchbar" type="text" placeholder="Search for best place to visit "  name="search" />
-        <img className="search" src={ IM } onClick={ find } alt="search" />
-      </div>
+      <form onSubmit={submitAction}>
+        <input
+          className="search-bar"
+          name="search"
+          type="inputbox"
+          onChange={inputSearch}
+          placeholder="Search for best places to Visit in Europe"
+        />
+      </form>
+      <a href="/" onclick={() => console.log("test")}>
+        <img
+          className="search-icon"
+          onclick={() => {
+            alert("test");
+          }}
+          src={Imgsearch}
+          alt=""
+        />
+      </a>
     </>
   );
 };

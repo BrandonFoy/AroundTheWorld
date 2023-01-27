@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'apps.categories',
     'cloudinary',
     'django_filters',
-    'django'
 ]
 
 MIDDLEWARE = [
@@ -157,11 +156,10 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-cloudinary.config(
-    cloud_name="techis",
-    api_key="886187759951178",
-    api_secret="WGcWrWfkPlxdOCdlFaLTdjSNtfo",
-    secure=True
+cloudinary.config( 
+  cloud_name = "dxqpbc52e", 
+  api_key = "924217881948573", 
+  api_secret = "KTmvYsiHNBtYu618DHX7RwaWefw" 
 )
 
 REST_FRAMEWORK = {

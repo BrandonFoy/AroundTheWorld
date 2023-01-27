@@ -1,12 +1,16 @@
+import { push } from "connected-react-router";
+import { useDispatch } from "react-redux";
 import React from "react";
 
-const GridContent = () => {
+const GridContent = ({ category }) => {
+  const dispatch = useDispatch();
   return (
-    <>
-      <div className="header-1">
-        <h1>Popular Places</h1>
-      </div>
-    </>
+    <div
+      className="categoty-flex"
+      onClick={() => dispatch(push("/places?category=" + category.id))}
+    >
+      <img src={category.image} alt="" />
+    </div>
   );
 };
 
