@@ -1,29 +1,33 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import IM from "../../assets/img/icon.svg"
-import '../common/Search'
+import { push } from "connected-react-router";
+import { useDispatch } from "react-redux";
+import logo from "../../assets/img/logo.svg";
+import Dropdown from "../../assets/img/dropdown.svg";
 import Search from "../common/Search";
 
-
 const PlacesHeader = () => {
+     const dispatch = useDispatch();
   return (
-    <>
-      <header>
-        <div classname="places-header">
-          <div className="header">
-            <nav className="navbar">
-              <div className="logo">
-                <Link title="home" to="/"><img src={ IM } alt="Icon" /></Link>
-                <Link title="home" to="/"> Around The World </Link>
-              </div>
-              <Link className="favorites" to="/Favorites"> Favorites </Link>
-              <Search/>
-            </nav>
+      <>
+        <header>
+          <div className="places-header">
+            <div className="logo">
+              <img src={logo} alt="logo" onClick={() => dispatch(push("/"))} />
+            </div>
+            <div className="right-nav">
+              <img
+                src={Dropdown}
+                alt="dropdown"
+                onClick={() => dispatch(push("/favorites"))}
+              />
+            </div>
           </div>
-        </div>    
-      </header>
-    </>
+          <div className="search">
+            <Search />
+          </div>
+        </header>
+      </>
   );
 }
 
-export default PlacesHeader;
+export default PlacesHeader

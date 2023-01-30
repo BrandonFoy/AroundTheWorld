@@ -31,7 +31,7 @@ const PostForm = () => {
   };
 
   return (
-    <section class="post_form">
+    <section className="post_form">
       <input type="text" name="name" placeholder="Name" onChange={inputName} required />
       <textarea name="body" placeholder="Tell us anything" onChange={inputBody} required></textarea>
       <input name="image" type="file" onChange={inputImage} />

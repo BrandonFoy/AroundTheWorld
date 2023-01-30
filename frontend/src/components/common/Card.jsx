@@ -3,7 +3,6 @@ import { addFavorite } from "../../reducks/favorites/operations";
 import { getFavorites } from "../../reducks/favorites/selectors";
 import { useSelector, useDispatch } from "react-redux";
 import Imglike from "../../assets/img/favorite.svg";
-//import Places from "../../containers/Places"
 
 const Card = ({ place }) => {
   const dispatch = useDispatch();
@@ -12,22 +11,22 @@ const Card = ({ place }) => {
   };
   const selector = useSelector((state) => state);
   const favorites = getFavorites(selector);
-  const [setShowLikeButton] = useState(true);
+  const [showLikeButton, setShowLikeButton] = useState(true);
   useEffect(() => {
     let favoritePlace = favorites.filter(
       (favorite) => favorite.id === place.id
     );
     if (favoritePlace.length > 0) {
-      setShowLikeButton(false);
+      setShowLikeButton(!showLikeButton);
     }
-  }, [favorites]);
+  }, [favorites, place.id]);
 
   return (
     <>
-        <div class="category-list">
+        <div className="category-list">
           <div className="category-image">
             <img src={place.image} alt="" />
-            <div class="like">
+            <div className="like">
               <img
                 src={Imglike}
                 onClick={() => {
@@ -37,19 +36,19 @@ const Card = ({ place }) => {
               />
             </div>
           </div>
-          <div class="category-text">
-            <div class="category-heading">
+          <div className="category-text">
+            <div className="category-heading">
               <h1>{place.name}</h1>
             </div>
-            <div class="gridsubheading">
+            <div className="gridsubheading">
               <h2>{place.place_type}</h2>
             </div>
-            <div class="gridtext">
-              <p>"Opens"{place.time_to_travel}"hours."</p>
+            <div className="gridtext">
+              <p>Best time to visit:{place.time_to_travel}</p>
 
               <p>{place.description}</p>
             </div>
-            <div class="input-button">
+            <div className="input-button">
               <a href={place.googel_map_link} target="_blank" rel="noopener noreferrer">
                 {" "}
                 Direction{" "}

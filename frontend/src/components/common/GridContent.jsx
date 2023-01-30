@@ -5,12 +5,18 @@ import React from "react";
 const GridContent = ({ category }) => {
   const dispatch = useDispatch();
   return (
+    <>
     <div
       className="categoty-flex"
       onClick={() => dispatch(push("/places?category=" + category.id))}
     >
       <img src={category.image} alt="" />
+      <div className="category-name">
+      {category.name}
     </div>
+    </div>
+ 
+    </>
   );
 };
 

@@ -26,10 +26,10 @@ const Search = () => {
           placeholder="Search for best places to Visit in Europe"
         />
       </form>
-      <a href="/" onclick={() => console.log("test")}>
+      <a href="/">
         <img
           className="search-icon"
-          onclick={() => {
+          onClick={() => {
             alert("test");
           }}
           src={Imgsearch}

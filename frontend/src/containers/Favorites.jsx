@@ -1,5 +1,5 @@
 import React from "react";
-import FavCard from "../components/common/Favcard";
+import Favcard from "../components/common/Favcard";
 import Footer from "../components/common/Footer";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -15,16 +15,16 @@ const Favorites = () => {
   console.log(favorites);
   useEffect(() => {
     dispatch(fetchFromLocalStorage());
-  }, []);
+  },[]);
 
   return (
     <>
       <PlacesHeader />
-      <section class="section2">
-        <div class="heading-favorite">Favorite Places</div>
-        <div class="grid">
+      <section className="section2">
+        <div className="heading-favorite">Favorite Places</div>
+        <div className="grid">
           {favorites.map((favorite) => (
-            <FavCard favorite={favorite} />
+            <Favcard favorite={favorite} />
           ))}
         </div>
       </section>

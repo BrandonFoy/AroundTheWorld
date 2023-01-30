@@ -11,22 +11,22 @@ const Post = ({ post }) => {
 
   return (
     <li>
-      <img class="menu_icon" onClick={() => setMenuToggle(!menuToggle)} src={IconSmallMenu} />
+      <img className="menu_icon" onClick={() => setMenuToggle(!menuToggle)} src={IconSmallMenu} />
       {menuToggle && (
-        <div class="menu">
+        <div className="menu">
           <span onClick={() => dispatch(deletePost(post.id))}>Delete</span>
         </div>
       )}
-      <div class="logo">
+      <div className="logo">
         <img src={IconUser} />
       </div>
-      <div class="name_body">
-        <div class="name">{post.name}</div>
-        <div class="datetime">{post.created_at}</div>
+      <div className="name_body">
+        <div className="name">{post.name}</div>
+        <div className="datetime">{post.created_at}</div>
         <p>{post.body}</p>
         {post.image && (
           <a href={post.image} target="_blank">
-            <img class="post-image" src={post.image} />
+            <img className="post-image" src={post.image} />
           </a>
         )}
       </div>

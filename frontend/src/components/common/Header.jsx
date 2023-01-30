@@ -11,14 +11,14 @@ const Header = () => {
     <>
       <header>
         <nav>
-          <div class="logo">
+          <div className="logo">
             <img src={logo} alt="logo" onClick={() => dispatch(push('/'))} />
           </div>
-          <div class="right-nav">
+          <div className="right-nav">
             <img src={Dropdown} alt="dropdown" onClick={() => dispatch(push('/favorites'))} />
           </div>
         </nav>
-        <div class="search">
+        <div className="search">
           <Search />
         </div>
       </header>

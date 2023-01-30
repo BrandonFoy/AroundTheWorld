@@ -19,17 +19,17 @@ const Thumbnail = ({ place }) => {
     if (favoritePlace.length > 0) {
       setShowLikeButton(false);
     }
-  }, [favorites]);
+  }, [favorites, place.id ]);
   return (
     <>
-      <div class="item">
-        <div class="item-image">
+      <div className="item">
+        <div className="item-image">
           {showLikeButton && (
-            <div class="like">
+            <div className="like">
               <img
-                class="like"
+                className="like"
                 src={Imglike}
-                alt="favorite"
+                alt="favorites"
                 onClick={() => {
                   clickFavorite(place);
                 }}
@@ -38,7 +38,7 @@ const Thumbnail = ({ place }) => {
           )}
           <img src={place.image} alt="place" />
         </div>
-        <div class="item-text">
+        <div className="item-text">
           <h1>{place.name}</h1>
           <p>{place.description}</p>
         </div>

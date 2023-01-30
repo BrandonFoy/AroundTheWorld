@@ -1,7 +1,5 @@
 import axios from "axios";
 
-const LOGIN_USER_KEY = "WD_FORUM_LOGIN_USER_KEY";
-
 var baseURL;
 if (
   process.env.REACT_APP_ENVIRONMENT &&
@@ -18,24 +16,6 @@ const api = axios.create({
     "Content-Type": "application/json",
   },
 });
-
-/**
- * Add requireToken: true in request config, for API that required Authorization token
- */
-api.interceptors.request.use(
-  (config) => {
-    if (config.requireToken && localStorage.getItem(LOGIN_USER_KEY)) {
-      config.headers.common["Authorization"] = JSON.parse(
-        localStorage.getItem(LOGIN_USER_KEY)
-      ).token;
-    }
-
-    return config;
-  },
-  (err) => {
-    console.error(err);
-  }
-);
 
 export default class API {
   getPlaces = async (search, category) => {
@@ -60,7 +40,7 @@ export default class API {
       .catch((error) => {
         throw new Error(error);
       });
-    return places;
+    return places.results;
   };
 
   getCategories = async () => {
@@ -72,6 +52,6 @@ export default class API {
       .catch((error) => {
         throw new Error(error);
       });
-    return categories;
+    return categories.results;
   };
 }

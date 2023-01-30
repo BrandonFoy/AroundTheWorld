@@ -1,10 +1,10 @@
 import React from 'react';
-import Routers from './Router';
+import Router from './Router';
 import "./assets/home.css";
 
 function App() {
     return (
-    <Routers />
+    <Router />
     );
 }
 

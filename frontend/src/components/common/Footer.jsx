@@ -9,21 +9,21 @@ function Footer() {
   return (
     <>
       <footer>
-        <div class="copyright">
+        <div className="copyright">
           <img src={FooterLogo} alt="logo" onClick={() => dispatch(push('/'))} />
           <p>© 2021 TripAdvisor LLC All rights reserved.</p>
         </div>
-        <div class="privacy">
-          <a href="/Main">Privacy Policy</a>
-          <a href="/Main">Terms of Use </a>
-          <a href="/Main">Sitemap</a>
+        <div className="privacy">
+          <a href="/">Privacy Policy</a>
+          <a href="/">Terms of Use </a>
+          <a href="/">Sitemap</a>
         </div>
-        <div class="version">
+        <div className="version">
           <p>
             This is the version of our website addressed to speakers of English
             in India. If you are a resident of another country <br />
-            or region, please select the appropriate versio of Tripadvisor for
-            your country or region in the drop-down menu. more
+            or region, please select the appropriate version of Tripadvisor for
+            your country or region in the drop-down menu.
           </p>
         </div>
       </footer>
